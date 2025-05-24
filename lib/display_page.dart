@@ -27,7 +27,8 @@ class DisplayPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailPage(data: value),
+                    builder:
+                        (context) => DetailPage(data: value, routeKey: key),
                   ),
                 );
               },
