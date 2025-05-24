@@ -1,22 +1,20 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'home_page.dart'; // 导入主页
 
 void main() {
-  runApp(StarApp());
+  runApp(const MyApp());
 }
 
-class StarApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '星空探索',
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        appBarTheme: AppBarTheme(backgroundColor: Colors.white, elevation: 0),
-      ),
-      home: HomeScreen(),
-      debugShowCheckedModeBanner: false,
+      title: '鬱英词典',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomePage(), // 设置主页为初始路由
     );
   }
 }
